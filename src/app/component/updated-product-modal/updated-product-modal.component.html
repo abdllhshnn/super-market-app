@@ -1,0 +1,85 @@
+<div
+  class="modal fade"
+  id="updatedProductModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ürün Düzenleme</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <form >
+          <!-- Reyon Adı -->
+          <div class="mb-3">
+            <label for="reyonAdi" class="form-label">Ürün ID</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              id="reyonAdi"
+              readonly
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="ürünAdi" class="form-label">Ürün Adı</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              id="ürünAdi"
+            />
+          </div>
+          <!-- Reyon Türü -->
+          <div class="mb-3">
+            <label for="reyonTuru" class="form-label">Bulunduğu Reyon Türü</label>
+            <select class="form-select form-select-dark" id="reyonTuru" >
+              <option value="Gıda" selected>Gıda</option>
+              <option value="Temizlik">Temizlik</option>
+              <option value="Kozmetik">Kozmetik</option>
+            </select>
+          </div>
+          <!-- Eklenecek Market -->
+          <div class="mb-3">
+            <label for="marketName" class="form-label">Taşınacak Marketi Seçiniz</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              id="marketName"
+              readonly
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="marketName" class="form-label">Taşınacak Reyonu Seçiniz</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              readonly
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Kapat
+        </button>
+        <button type="button" class="btn btn-primary"  data-bs-dismiss="modal">Kaydet</button>
+      </div>
+    </div>
+  </div>
+</div>

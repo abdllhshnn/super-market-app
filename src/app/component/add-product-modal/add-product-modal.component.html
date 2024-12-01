@@ -1,0 +1,60 @@
+<div
+  class="modal fade"
+  [id]="sectionName"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ürün Ekleme {{sectionName}}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <form [formGroup]="productForm">
+
+          <div class="mb-3">
+            <label for="urunAdi" class="form-label">Ürün Adı</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              id="urunAdi"
+              formControlName="productName"
+              placeholder="Ürün Adı Giriniz..."
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="marketName" class="form-label">Eklenecek Reyon</label>
+            <input
+              type="text"
+              class="form-control form-control-dark"
+              id="marketName"
+              formControlName="section"
+              readonly
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          Kapat
+        </button>
+        <button type="button" class="btn btn-primary" (click)="addProduct()" data-bs-dismiss="modal">Kaydet</button>
+      </div>
+    </div>
+  </div>
+</div>

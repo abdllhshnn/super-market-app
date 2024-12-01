@@ -1,0 +1,39 @@
+.modal-content {
+  background-color: #2c2f38;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: none;
+  background-color: #1f1f2e;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.btn-primary {
+  background-color: #6c63ff;
+  border-color: #6c63ff;
+}
+
+.btn-primary:hover {
+  background-color: #5b55e5;
+  border-color: #5b55e5;
+}
+
+.btn-secondary {
+  background-color: #444;
+  border-color: #444;
+}
+
+.btn-secondary:hover {
+  background-color: #555;
+  border-color: #555;
+}

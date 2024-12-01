@@ -1,0 +1,71 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- Marketler -->
+    <div class="col-md-6" *ngFor="let market of markets | keyvalue">
+      <div class="card shadow w-100">
+
+        <!-- Market Başlığı -->
+        <div class="card-header bg-dark text-white text-center">
+          <h5 class="mb-0">{{ market.key }}</h5>
+        </div>
+
+        <!-- Market Tablo Başlığı -->
+        <div class="row bg-dark text-white p-2 mx-0">
+          <div class="col-2 text-center">Reyon</div>
+          <div class="col-2">Tür</div>
+          <div class="col-6">Ürünler</div>
+          <div class="col-2 text-end">
+            <button
+              class="btn btn-outline-primary btn-sm"
+              data-bs-toggle="modal" [attr.data-bs-target]="'#' + market.key">
+              <i class="bi bi-plus"></i> Reyon Ekle
+            </button>
+            <app-add-section-modal [marketKey]="market.key"></app-add-section-modal>
+          </div>
+        </div>
+
+        <!-- Market Departmanları -->
+        <div class="card-body">
+          <div
+            class="row mb-3 align-items-center border-bottom pb-2 mx-0"
+            *ngFor="let section of market.value"
+          >
+            <div class="col-2">
+              <span>{{ section.sectionName }}</span>
+              <button class="btn btn-danger btn-sm ms-2" (click)="deleteSection(section.sectionName, market.key)">
+                <i class="bi bi-trash"></i>
+              </button>
+
+            </div>
+            <div class="col-2">{{ section.sectionType }}</div>
+            <div class="col-6">
+              <!-- Ürünler -->
+              <span
+                *ngFor="let product of section.products"
+                class="badge bg-warning text-dark me-2 "
+                data-bs-toggle="modal"
+                data-bs-target="#updatedProductModal"
+              >
+                {{ product.productName }}
+              </span>
+              <app-updated-product-modal></app-updated-product-modal>
+            </div>
+            <div class="col-2 text-end">
+              <button
+                class="btn btn-primary btn-sm"  data-bs-toggle="modal" [attr.data-bs-target]="'#' + section.sectionName" >
+                <i class="bi bi-plus-circle"></i> Ürün Ekle
+              </button>
+              <app-add-product-modal [sectionName]="section.sectionName" [marketKey]="market.key"></app-add-product-modal>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-end mt-3">
+  <button class="btn btn-success">
+    <i class="bi bi-save"></i> Kaydet
+  </button>
+</div>

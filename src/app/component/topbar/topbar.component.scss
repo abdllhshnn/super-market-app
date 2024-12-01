@@ -1,0 +1,16 @@
+.currency-display {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffc107;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.currency-box {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
+  font-weight: bold;
+}

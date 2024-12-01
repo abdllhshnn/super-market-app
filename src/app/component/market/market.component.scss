@@ -1,0 +1,44 @@
+.card {
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.bg-dark {
+  background-color: #2c2f38 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.btn-outline-primary {
+  border-color: #d4bff9;
+  color: #d4bff9;
+}
+
+.btn-outline-primary:hover {
+  background-color: #d4bff9;
+  color: #2c2f38;
+}
+
+.badge {
+  font-size: 0.85rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
